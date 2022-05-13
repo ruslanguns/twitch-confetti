@@ -10,6 +10,9 @@ const App = () => {
         <Link to="/stars-paradax">
           <li>Animated Background: Stars Paradax</li>
         </Link>
+        <Link to="/neon">
+          <li>Neon RusGunX</li>
+        </Link>
       </ul>
     </div>
   );
