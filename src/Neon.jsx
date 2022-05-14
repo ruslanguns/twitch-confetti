@@ -1,6 +1,6 @@
 import "./styles/Neon.css";
 
 const Neon = () => {
-  return <div class="neon">@RusGunX</div>;
+  return <div className="neon">RusGunX</div>;
 };
 export default Neon;
