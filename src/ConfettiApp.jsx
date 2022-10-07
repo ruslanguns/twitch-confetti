@@ -34,9 +34,11 @@ function ConfettiApp() {
     client.on("message", (channel, tags, message, self) => {
       if (self) return;
 
-      if (message.toLowerCase().includes("!yeah")) {
-        !active && handleConfetti();
-      }
+      ["!yeah", "!confetti", "!c"].forEach((cmd) => {
+        if (message.toLowerCase().includes(cmd)) {
+          !active && handleConfetti();
+        }
+      });
     });
 
     return () => {
