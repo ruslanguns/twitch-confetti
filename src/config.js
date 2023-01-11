@@ -3,7 +3,7 @@ export const TWITCH_CHANNELS = sanitizeArrayEnvInput(
 );
 export const TWITCH_CONFETTI_CMDS = getConffetiCommands();
 
-const getConffetiCommands = () => {
+function getConffetiCommands() {
   const cmds = sanitizeArrayEnvInput(import.meta.env.VITE_TWITCH_CONFETTI_CMDS);
 
   if (!cmds.length) return ["!confetti"];
@@ -14,7 +14,7 @@ const getConffetiCommands = () => {
 /** @param {string} input */
 function sanitizeArrayEnvInput(input) {
   try {
-    if (input) return [];
+    if (!input) return [];
 
     return input.split(",").map((x) => x.trim());
   } catch (error) {
