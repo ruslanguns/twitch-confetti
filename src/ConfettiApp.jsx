@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import Confetti from "react-dom-confetti";
 import Tmi from "tmi.js";
+import { TWITCH_CHANNELS, TWITCH_CONFETTI_CMDS } from "./config";
 
 function ConfettiApp() {
   const [active, setActive] = useState(false);
   const [audio] = useState(new Audio("/assets/audio/audio.mp3"));
   const tmiClient = useRef(
     new Tmi.Client({
-      channels: ["rusgunx"],
+      channels: TWITCH_CHANNELS,
     })
   );
 
@@ -35,7 +36,7 @@ function ConfettiApp() {
     tmiClient.current.on("message", (channel, tags, message, self) => {
       if (self) return;
 
-      ["!yeah", "!confetti", "!c"].forEach((cmd) => {
+      TWITCH_CONFETTI_CMDS.forEach((cmd) => {
         if (message.toLowerCase().includes(cmd)) {
           handleConfetti();
         }

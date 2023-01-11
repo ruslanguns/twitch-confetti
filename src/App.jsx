@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const App = () => {
   return (
     <div>
       <ul>
-        <Link to="/confetti">
+        <Link to='/confetti'>
           <li>Confetti App</li>
         </Link>
-        <Link to="/stars-paradax">
+        <Link to='/stars-paradax'>
           <li>Animated Background: Stars Paradax</li>
         </Link>
-        <Link to="/neon">
+        <Link to='/neon'>
           <li>Neon RusGunX</li>
         </Link>
       </ul>
