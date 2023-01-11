@@ -1,9 +1,9 @@
 export const TWITCH_CHANNELS = sanitizeArrayEnvInput(
   import.meta.env.VITE_TWITCH_CHANNELS
 );
-export const TWITCH_CONFETTI_CMDS = getConffetiCommands();
+export const TWITCH_CONFETTI_CMDS = sanitizeConfettiEnv();
 
-function getConffetiCommands() {
+function sanitizeConfettiEnv() {
   const cmds = sanitizeArrayEnvInput(import.meta.env.VITE_TWITCH_CONFETTI_CMDS);
 
   if (!cmds.length) return ["!confetti"];
