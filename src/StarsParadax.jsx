@@ -1,4 +1,4 @@
-import "./styles/StarsParadax.css";
+import './styles/StarsParadax.css';
 
 /**
  * Parallax Star background 100% in CSS
@@ -8,10 +8,10 @@ import "./styles/StarsParadax.css";
  */
 const StarsParadax = () => {
   return (
-    <div class="wrapper">
-      <div id="stars"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div>
+    <div class='wrapper'>
+      <div id='stars'></div>
+      <div id='stars2'></div>
+      <div id='stars3'></div>
     </div>
   );
 };
